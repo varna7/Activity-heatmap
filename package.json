@@ -1,0 +1,39 @@
+{
+  "name": "vs-code-heat-map",
+  "displayName": "VS Code Heat Map",
+  "description": "\"Tracks and visualizes your coding activity in Visual Studio Code. Monitor your progress, see which files you've been editing, and gain insights into your coding habits.\"",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vs-code-heat-map.showHeatmap",
+        "title": "Show Heatmap"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.3",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.84.2",
+    "@vscode/test-electron": "^2.3.6",
+    "eslint": "^8.52.0",
+    "glob": "^10.3.10",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.0"
+  }
+}
